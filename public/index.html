@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Kit Fitness</title>
+  <meta name="description"
+    content="The first fitness video platform to bring boutique workouts to your busy lifestyle.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Public+Sans|Roboto+Mono|Solway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+  <meta property="og:image"
+    content="https://www.booyafitness.com/assets/booya_image-02a800ad3dfc538d73f9a48ee4cd9557.png" />
+  <meta property="og:title" content="Booya Fitness" />
+  <meta property="og:url" content="https://www.booyafitness.com/" />
+  <meta property="og:site_name" content="Booya Fitness" />
+  <meta property="og:type" content="fitness.course" />
+
+  <link rel="image_src" href="/assets/booya_image-02a800ad3dfc538d73f9a48ee4cd9557.png" />
+  
+  <script type="text/javascript">
+    //<![CDATA[
+    window.gon = {}; gon.current_user = false; gon.static_routes = { "partners": [] }; gon.visitor_cookie = { "user_signed_in": false, "decrypt_referral": "", "encrypt_referral": "" };
+//]]>
+  </script>
+  <link href="/assets/favicon-6eb349c4eb1e0a97ae173e3258e79b6e.png" rel="shortcut icon"
+    type="image/vnd.microsoft.icon" />
+
+  <link href="/assets/application-b83140793acac57a3b60205d40b31d22.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/assets/argon.css" media="all" rel="stylesheet" type="text/css" />
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="CXy9qD6s9J8Ikf39LYiknYLp9wx4K6l6QcpQoOKR0DU=" name="csrf-token" />
+
+</head>
+
+<body> 
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+var basic = $('#main-cropper').croppie({
+    viewport: { width: 250, height: 250 },
+    boundary: { width: 300, height: 300 },
+    showZoomer: false,
+    url: 'http://lorempixel.com/500/400/'
+});
+
+function readFile(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#main-cropper').croppie('bind', {
+        url: e.target.result
+      });
+      $('.actionDone').toggle();
+      $('.actionUpload').toggle();
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$('.actionUpload input').on('change', function () { readFile(this); });
+$('.actionDone').on('click', function(){
+  $('.actionDone').toggle();
+  $('.actionUpload').toggle();
+})
+</script>
+</body>
+
+</html>

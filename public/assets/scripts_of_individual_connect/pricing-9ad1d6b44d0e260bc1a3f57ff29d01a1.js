@@ -1,0 +1,1 @@
+!function(t){addBindToSubscribeButton(),t(".apple-note").length>0&&t("#coupon-code").prop("disabled",!0)}(jQuery);

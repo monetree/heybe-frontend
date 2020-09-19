@@ -1,0 +1,1 @@
+function setCarouselMaxVisibleItems(t){var e=0,n=$(window).width(),i="item-width-1-";if(e=n>1024?3:1024>=n&&n>=700?2:1,t.visibleItems!==e){var o=$(".ca-container"),s=$(".ca-wrapper"),a="";t.visibleItems=e,$(o).contentcarousel(t),a=$(s).attr("class").match(new RegExp(i+"\\d"))[0],$(s).removeClass(a).addClass(i+e)}}

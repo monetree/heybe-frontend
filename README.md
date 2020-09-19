@@ -1,2 +1,0 @@
-
-# heybe-frontend
